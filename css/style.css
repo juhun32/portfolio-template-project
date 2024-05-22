@@ -21,6 +21,9 @@
   --fs-h2: 2.25rem;
   --fs-h3: 1.21rem;
   --fs-body: 1rem;
+
+  --bs: 0.25em 0.25em 0.75em rgba(0, 0, 0, 0.25),
+    0.125em 0.125em 0.25em rgba(0, 0, 0, 0.15);
 }
 
 @media (min-width: 800px) {
@@ -91,6 +94,7 @@ h3 {
 .section__subtitle--intro,
 .section__subtitle--about {
   background: var(--clr-accent);
+  padding: 0.25em 1em;
   font-family: var(--ff-secondary);
   margin-bottom: 1em;
 }
@@ -103,6 +107,14 @@ nav {
 
 .intro {
   position: relative;
+}
+
+.intro__img {
+  box-shadow: var(--bs);
+}
+
+.section__subtitle--intro {
+  display: inline-block;
 }
 
 @media (min-width: 600px) {
@@ -120,10 +132,18 @@ nav {
   .intro__img {
     grid-area: img;
     min-width: 250px;
+    position: relative;
+    z-index: 2;
   }
 
   .section__subtitle--intro {
     align-self: start;
     grid-column: -1 / 1;
+    grid-row: 2;
+
+    text-align: right;
+    position: relative;
+    left: -1.5em;
+    width: calc(100% + 1.5em);
   }
 }
