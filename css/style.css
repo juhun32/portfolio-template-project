@@ -21,6 +21,9 @@
   --fs-h2: 2.25rem;
   --fs-h3: 1.21rem;
   --fs-body: 1rem;
+
+  --bs: 0.25em 0.25em 0.75em rgba(0, 0, 0, 0.25),
+    0.125em 0.125em 0.25em rgba(0, 0, 0, 0.15);
 }
 
 @media (min-width: 800px) {
@@ -52,6 +55,32 @@ img {
   max-width: 100%;
 }
 
+:focus {
+  outline: 3px solid var(--clr-accent);
+  outline-offset: 3px;
+}
+
+/* buttons */
+
+.btn {
+  display: inline-block;
+  padding: 0.5em 2.5em;
+  background: var(--clr-accent);
+  color: var(--clr-dark);
+  text-decoration: none;
+  cursor: pointer;
+  font-size: 0.8rem;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  font-weight: bold;
+  transition: transform 200ms ease-in-out;
+  border-radius: 10px;
+}
+
+.btn:hover {
+  transform: scale(1.1);
+}
+
 /* Typography */
 
 h1,
@@ -71,10 +100,6 @@ h3 {
   font-size: var(--fs-h3);
 }
 
-.section__title {
-  margin-bottom: 0.25em;
-}
-
 .section__title--intro {
   font-weight: var(--fw-reg);
 }
@@ -86,13 +111,16 @@ h3 {
 .section__subtitle {
   margin: 0;
   font-size: var(--fs-h3);
+  font-weight: 500;
 }
 
 .section__subtitle--intro,
 .section__subtitle--about {
   background: var(--clr-accent);
+  padding: 0.25em 1em;
   font-family: var(--ff-secondary);
   margin-bottom: 1em;
+  border-radius: 10px;
 }
 
 /* intro */
@@ -103,6 +131,15 @@ nav {
 
 .intro {
   position: relative;
+}
+
+.intro__img {
+  box-shadow: var(--bs);
+}
+
+.section__subtitle--intro {
+  /* display: inline-block; */
+  text-align: center;
 }
 
 @media (min-width: 600px) {
@@ -120,10 +157,146 @@ nav {
   .intro__img {
     grid-area: img;
     min-width: 250px;
+    position: relative;
+    z-index: 2;
+    border-radius: 10px;
+  }
+
+  .section__title {
+    margin-bottom: 0.1em;
+    margin-left: 0.5em;
+    margin-right: 0.25em;
   }
 
   .section__subtitle--intro {
     align-self: start;
     grid-column: -1 / 1;
+    grid-row: 2;
+
+    text-align: right;
+    position: relative;
+    left: -1em;
+    width: calc(100% + 1.5em);
   }
+}
+
+/* my academics */
+.my-academics {
+  background-color: var(--clr-dark);
+  background-image: url(../img/laptop-background.png);
+  background-size: cover;
+  background-blend-mode: multiply;
+  color: var(--clr-light);
+  text-align: center;
+  max-width: 1500px;
+  margin: 0 auto;
+  padding: 2em 0; /* Added padding for better spacing */
+}
+
+.section__title--academics {
+  color: var(--clr-accent);
+  position: relative;
+  text-align: center;
+}
+
+.section__title--academics::after {
+  content: "";
+  display: block;
+  width: 9em;
+  height: 2px;
+  margin: 0.5em auto 1em;
+  background: var(--clr-light);
+  opacity: 0.3;
+}
+
+.academics {
+  display: flex;
+  flex-direction: column; /* Column direction for smaller screens */
+  align-items: center; /* Center items horizontally */
+}
+
+.academic--1 {
+  margin-bottom: 2em;
+}
+
+@media (min-width: 800px) {
+  .academics {
+    flex-direction: row; /* Row direction for larger screens */
+    justify-content: center; /* Center items horizontally */
+    max-width: 1000px;
+    margin-left: auto;
+    margin-right: auto;
+    align-items: center; /* Align items vertically */
+  }
+
+  .academic:first-child {
+    order: 1; /* First item in row layout */
+    align-self: flex-start; /* Align to the top */
+    margin-left: 2em;
+  }
+
+  .academic:nth-child(2) {
+    order: 2; /* Second item in row layout (middle) */
+    align-self: center; /* Align to the center */
+    margin-left: 2em; /* Add spacing to the left */
+    margin-right: 2em; /* Add spacing to the right */
+  }
+
+  .academic:last-child {
+    order: 3; /* Third item in row layout */
+    align-self: flex-end; /* Align to the bottom */
+    margin-right: 2em;
+  }
+}
+
+.academic {
+  margin-bottom: 1.5em; /* Add bottom margin to space out the sections */
+  flex: 1; /* Allow flex items to grow equally */
+  min-width: 200px; /* Ensure a minimum width for better layout */
+  text-align: center; /* Center text within each .academic section */
+}
+
+/* about */
+.about {
+  position: relative;
+  text-align: center;
+}
+
+.about__img {
+  box-shadow: var(--bs);
+  display: inline-block; /* Make the image an inline-block element */
+  max-width: 100%; /* Ensure the image scales properly */
+  height: auto;
+  border-radius: 10px;
+}
+
+.about__body {
+  position: static;
+  margin-top: 2em;
+  max-width: 600px;
+  text-align: center;
+}
+
+.about__body--title::after {
+  content: "";
+  display: block;
+  width: 7em;
+  height: 1px;
+  margin: 0.5em auto 1em;
+  background: var(--clr-dark);
+  opacity: 0.3;
+}
+
+.projects {
+  position: relative;
+  text-align: center;
+}
+
+.portfolio__img {
+  box-shadow: var(--bs);
+  display: inline-block; /* Make the image an inline-block element */
+  max-width: 100%; /* Ensure the image scales properly */
+  height: 12em;
+  margin: 0.7em;
+  border-radius: 10px;
 }
