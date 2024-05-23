@@ -100,12 +100,6 @@ h3 {
   font-size: var(--fs-h3);
 }
 
-.section__title {
-  margin-bottom: 0.1em;
-  margin-left: 0.5em;
-  margin-right: 0.25em;
-}
-
 .section__title--intro {
   font-weight: var(--fw-reg);
 }
@@ -117,6 +111,7 @@ h3 {
 .section__subtitle {
   margin: 0;
   font-size: var(--fs-h3);
+  font-weight: 500;
 }
 
 .section__subtitle--intro,
@@ -143,7 +138,8 @@ nav {
 }
 
 .section__subtitle--intro {
-  display: inline-block;
+  /* display: inline-block; */
+  text-align: center;
 }
 
 @media (min-width: 600px) {
@@ -164,6 +160,12 @@ nav {
     position: relative;
     z-index: 2;
     border-radius: 10px;
+  }
+
+  .section__title {
+    margin-bottom: 0.1em;
+    margin-left: 0.5em;
+    margin-right: 0.25em;
   }
 
   .section__subtitle--intro {
@@ -200,8 +202,8 @@ nav {
 .section__title--academics::after {
   content: "";
   display: block;
-  width: 7em;
-  height: 1px;
+  width: 9em;
+  height: 2px;
   margin: 0.5em auto 1em;
   background: var(--clr-light);
   opacity: 0.3;
@@ -211,6 +213,10 @@ nav {
   display: flex;
   flex-direction: column; /* Column direction for smaller screens */
   align-items: center; /* Center items horizontally */
+}
+
+.academic--1 {
+  margin-bottom: 2em;
 }
 
 @media (min-width: 800px) {
@@ -258,8 +264,8 @@ nav {
 
 .about__img {
   box-shadow: var(--bs);
-  display: inline-block;   /* Make the image an inline-block element */
-  max-width: 100%;         /* Ensure the image scales properly */
+  display: inline-block; /* Make the image an inline-block element */
+  max-width: 100%; /* Ensure the image scales properly */
   height: auto;
   border-radius: 10px;
 }
@@ -288,9 +294,9 @@ nav {
 
 .portfolio__img {
   box-shadow: var(--bs);
-  display: inline-block;   /* Make the image an inline-block element */
-  max-width: 100%;         /* Ensure the image scales properly */
+  display: inline-block; /* Make the image an inline-block element */
+  max-width: 100%; /* Ensure the image scales properly */
   height: 12em;
-  margin: .7em;
+  margin: 0.7em;
   border-radius: 10px;
 }
