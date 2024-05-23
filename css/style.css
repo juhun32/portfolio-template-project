@@ -57,19 +57,19 @@ img {
 
 :focus {
   outline: 3px solid var(--clr-accent);
-  outline-offset: 3px;                  
+  outline-offset: 3px;
 }
 
 /* buttons */
 
 .btn {
   display: inline-block;
-  padding: .5em 2.5em;
+  padding: 0.5em 2.5em;
   background: var(--clr-accent);
   color: var(--clr-dark);
   text-decoration: none;
   cursor: pointer;
-  font-size: .8rem;
+  font-size: 0.8rem;
   text-transform: uppercase;
   letter-spacing: 2px;
   font-weight: bold;
@@ -170,7 +170,7 @@ nav {
 
     text-align: right;
     position: relative;
-    left: -1.5em;
+    left: -1em;
     width: calc(100% + 1.5em);
   }
 }
@@ -195,13 +195,13 @@ nav {
 }
 
 .section__title--academics::after {
-  content: '';
+  content: "";
   display: block;
   width: 7em;
   height: 1px;
-  margin: .5em auto 1em;
+  margin: 0.5em auto 1em;
   background: var(--clr-light);
-  opacity: .3;
+  opacity: 0.3;
 }
 
 .academics {
@@ -246,3 +246,31 @@ nav {
   min-width: 200px; /* Ensure a minimum width for better layout */
   text-align: center; /* Center text within each .academic section */
 }
+
+/* about */
+.about {
+  position: relative;
+  text-align: center;
+}
+
+.about__img {
+  box-shadow: var(--bs);
+  display: inline-block;   /* Make the image an inline-block element */
+  max-width: 100%;         /* Ensure the image scales properly */
+  height: auto;
+}
+
+.about__body {
+  margin-top: 2em;
+}
+
+.about__body--title::after {
+  content: "";
+  display: block;
+  width: 7em;
+  height: 1px;
+  margin: 0.5em auto 1em;
+  background: var(--clr-dark);
+  opacity: 0.3;
+}
+
