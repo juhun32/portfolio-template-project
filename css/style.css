@@ -181,6 +181,7 @@ nav {
 }
 
 /* my academics */
+
 .my-academics {
   background-color: var(--clr-dark);
   background-image: url(../img/laptop-background.png);
@@ -213,6 +214,15 @@ nav {
   display: flex;
   flex-direction: column; /* Column direction for smaller screens */
   align-items: center; /* Center items horizontally */
+}
+
+.academic {
+  margin-bottom: 1.5em; /* Add bottom margin to space out the sections */
+  flex: 1; /* Allow flex items to grow equally */
+  min-width: 200px; /* Ensure a minimum width for better layout */
+  text-align: center; /* Center text within each .academic section */
+  margin-left: 2em;
+  margin-right: 2em;
 }
 
 .academic--1 {
@@ -249,14 +259,8 @@ nav {
   }
 }
 
-.academic {
-  margin-bottom: 1.5em; /* Add bottom margin to space out the sections */
-  flex: 1; /* Allow flex items to grow equally */
-  min-width: 200px; /* Ensure a minimum width for better layout */
-  text-align: center; /* Center text within each .academic section */
-}
-
 /* about */
+
 .about {
   position: relative;
   text-align: center;
