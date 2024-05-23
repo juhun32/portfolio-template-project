@@ -74,6 +74,7 @@ img {
   letter-spacing: 2px;
   font-weight: bold;
   transition: transform 200ms ease-in-out;
+  border-radius: 10px;
 }
 
 .btn:hover {
@@ -124,6 +125,7 @@ h3 {
   padding: 0.25em 1em;
   font-family: var(--ff-secondary);
   margin-bottom: 1em;
+  border-radius: 10px;
 }
 
 /* intro */
@@ -161,6 +163,7 @@ nav {
     min-width: 250px;
     position: relative;
     z-index: 2;
+    border-radius: 10px;
   }
 
   .section__subtitle--intro {
@@ -258,10 +261,14 @@ nav {
   display: inline-block;   /* Make the image an inline-block element */
   max-width: 100%;         /* Ensure the image scales properly */
   height: auto;
+  border-radius: 10px;
 }
 
 .about__body {
+  position: static;
   margin-top: 2em;
+  max-width: 600px;
+  text-align: center;
 }
 
 .about__body--title::after {
@@ -274,3 +281,16 @@ nav {
   opacity: 0.3;
 }
 
+.projects {
+  position: relative;
+  text-align: center;
+}
+
+.portfolio__img {
+  box-shadow: var(--bs);
+  display: inline-block;   /* Make the image an inline-block element */
+  max-width: 100%;         /* Ensure the image scales properly */
+  height: 12em;
+  margin: .7em;
+  border-radius: 10px;
+}
