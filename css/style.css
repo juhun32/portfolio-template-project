@@ -382,3 +382,9 @@ nav {
   margin: 0.7em;
   border-radius: 10px;
 }
+
+.footer-link {
+  background-color: var(--clr-dark);
+  color: var(--clr-light);
+  position: relative;
+}
