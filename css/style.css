@@ -369,7 +369,7 @@ nav {
 
 /* projects */
 
-.projects {
+.projects {e
   position: relative;
   text-align: center;
 }
@@ -383,8 +383,44 @@ nav {
   border-radius: 10px;
 }
 
+.footer {
+  background-color: #f1f1f1; /* Light gray background */
+  padding: 20px 0;
+  text-align: center;
+  width: 100%;
+}
+
 .footer-link {
-  background-color: var(--clr-dark);
-  color: var(--clr-light);
-  position: relative;
+  color: #333; /* Dark gray color for text */
+  text-decoration: none;
+  font-size: 18px;
+  display: block;
+  margin-bottom: 10px;
+}
+
+.footer-link i {
+  margin-right: 8px;
+}
+
+.social-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.social-list__item {
+  margin: 0 15px;
+}
+
+.social-list__link {
+  color: #333; /* Dark gray color for icons */
+  text-decoration: none;
+  font-size: 24px;
+}
+
+.social-list__link:hover {
+  color: #0073b1; /* Change color on hover */
 }
