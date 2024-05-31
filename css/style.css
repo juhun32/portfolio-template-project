@@ -497,14 +497,14 @@ header {
 /* footer */
 
 .footer {
-  background-color: #f1f1f1; /* Light gray background */
+  background-color: var(--clr-dark); /* Light gray background */
   padding: 20px 0;
   text-align: center;
   width: 100%;
 }
 
 .footer-link {
-  color: #333; /* Dark gray color for text */
+  color: var(--clr-light); /* Dark gray color for text */
   text-decoration: none;
   font-size: 18px;
   display: block;
@@ -529,11 +529,11 @@ header {
 }
 
 .social-list__link {
-  color: #333; /* Dark gray color for icons */
+  color: var(--clr-light); /* Dark gray color for icons */
   text-decoration: none;
   font-size: 24px;
 }
 
 .social-list__link:hover {
-  color: #0073b1; /* Change color on hover */
+  color: var(--clr-accent); /* Change color on hover */
 }
